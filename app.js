@@ -274,9 +274,9 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-const observer = new IntersectionObserver(handleIntersection, options);
+// const observer = new IntersectionObserver(handleIntersection, options);
 
-observer.observe(header);
+// observer.observe(header);
 
 // const gallery=document.querySelectorAll(".gallery .image");
 // const image=document.querySelectorAll(".gallery .image src");

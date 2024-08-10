@@ -1,3 +1,276 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+
+@layer base {
+  @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&display=swap');
+}
+
+
+.custom-shadow {
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+
+.glassmorphism {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 2xl;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.18);
+}
+
+.card {
+  width: 260px;
+  height: 350px;
+  perspective: 1000px;
+  
+}
+
+@media screen and (min-width: 768px) {
+  .card {
+    width: 300px;
+    height: 200px;
+    perspective: 1000px;
+    
+  }
+  
+}
+
+.card-inner {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.999s;
+  cursor: pointer;
+}
+
+.card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background-color: white;
+  color: #fff;
+  color: black;
+  display: flex;
+  align-items: center;
+  
+  border: 5px solid;
+  border-image-slice: 1;
+  /* border-width: 5px; */
+  /* border: 10px solid #6A2C70; */
+  border-image-source: linear-gradient(to right,  #8f68ac, #3d7cbc, #5db847);
+  /* background-image: linear-gradient(to right, #8f68ac, #3d7cbc, #5db847); */
+  
+  border-radius: 30px;
+  justify-content: center;
+  text-align: center;
+  font-size: 24px;
+  transform: rotateY(0deg);
+}
+
+.card-back {
+  /* background-color: linear-gradient(to right,  #8f68ac, #3d7cbc, #5db847); */
+  color: #fff;
+  display: flex;
+  align-items: center;
+  /* border: 10px solid #F08A5D; */
+  border-radius: 10px;
+  justify-content: center;
+  /* font-size: 27px; */
+  text-align: center;
+  transform: rotateY(180deg);
+}
+
+/* .gradient-border {
+  border: 10px solid;
+  border-image-slice: 1;
+  border-width: 10px;
+  border-image-source: linear-gradient(to right, #6A2C70, #F08A5D, #F9A826);
+  border-radius: 10px;
+} */
+
+
+
+
+#svg-services_svg svg {
+  width: 100%;
+  height: 100%;
+  scale: 5;
+}
+
+
+.nav_background{
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 3%, rgba(150, 215, 237, 0.7) 20%, rgba(114, 114, 199, 0.5) 80%);
+  
+
+}
+
+.background{
+    background-color: white;
+}
+
+#services {
+
+background-image: url("images/map.png");
+background-size: cover;
+background-repeat: no-repeat;
+
+}
+
+/* @media screen and (min-width: 768px){ */
+    .background{
+        background-color: transparent;
+        background-image: url('./images/Backgronud-01.png'); 
+        /* background-position: */
+        background-size: cover;
+        /* background-size: 90% 90%; */
+        background-repeat: no-repeat;
+        z-index: -2;
+        /* object-fit: fill; */
+    }
+
+    .background_choose{
+      background-color: transparent;
+      background-image: url('./images/Choose-pana.png'); 
+      background-position:left bottom;
+      background-size: cover;
+      background-size: 300px 300px;
+      background-repeat: no-repeat;
+      z-index: -2;
+      /* object-fit: fill; */
+  }
+    .background_2{
+      /* background-color: transparent; */
+      /* background-image: url(D:\tailwend\test\project\Website_contents\Biological_bg-01.png);  */
+      background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(150, 215, 237, 0.7) 50%, rgba(0, 0, 139, 0.5) 70%);
+      /* background-position: */
+      background-size: cover;
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      z-index: -2;
+      /* filter: blur(15px); */
+      /* object-fit: fill; */
+  }
+
+/* } */
+
+.video-container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+  }
+  
+  #video-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+
+  @keyframes bounce {
+    0%, 100% {
+        transform: translateY(-1%);
+        animation-delay: 2;
+        animation-duration: 5;
+        /* animation-timing-function: ease-in-out? */
+        animation-timing-function: cubic-bezier(0.1,0,0,0.1);
+    }
+    50% {
+        transform: none;
+        /* animation-timing-function: cubic-bezier(0,0,0.2,1); */
+    }
+}
+.animate-bounce-custom {
+    animation: bounce 1s infinite;
+}
+
+.clip-hex {
+  clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+}
+
+
+.biological {
+  /* font-style: italic; */
+  position: relative;
+  z-index: 2;
+  cursor: pointer;
+  /* font-weight: bold; */
+  /* background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(173, 216, 230, 0.7) 50%, rgba(0, 0, 139, 0.5) 70%); */
+  /* filter: blur(20px); */
+  color: white;
+  background-blend-mode:difference ;
+  /* padding: 0 0.22em; */
+  /* font-weight: 800; */
+  /* background-color: white; */
+  border-radius: 10px;
+}
+
+.biological::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 120%;
+  /* color: white; */
+  height: 180%;
+  /* background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(150, 215, 237, 0.7) 50%, rgba(0, 0, 139, 0.5) 70%); */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgb(143, 104, 172) 50%, rgb(61, 124, 188) 70%);
+
+  /* background: url(D:\tailwend\test\project\Website_contents\Biological_bg-01.png); */
+  transform: rotate(10);
+  filter: blur(20px);
+  /* filter: ; */
+  z-index: -1;
+  border-radius: 50%;
+}
+
+
+
+.underline-center {
+    position: relative;
+    display: inline-block;
+}
+
+.underline-center::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: -2px;
+    left: 50%;
+    background-color: currentColor;
+    transition: width 0.3s ease, left 0.3s ease;
+}
+
+.underline-center:hover::after {
+    width: 100%;
+    left: 0;
+}
+
+
+.gradient-text {
+    background: linear-gradient(to right, #0057ff, #ff0099, #ff5500);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+
+
+
