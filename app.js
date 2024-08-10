@@ -99,7 +99,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 window.location.href = href;
             }, 500); // Match the transition duration
         });
-    }
+    }})
 
 function change(e){
     let list=document.getElementById('mobileMenu');
