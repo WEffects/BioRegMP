@@ -22,9 +22,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //     gsap.registerPlugin(ScrollTrigger);
 
 //     // Animate the image
-//     gsap.from(".container img", {
+//     gsap.from(".about img", {
 //         scrollTrigger: {
-//             trigger: ".container",
+//             trigger: ".about",
 //             start: "top 50%",
 //             end: "top 10%",
 //             scrub: true,
@@ -37,9 +37,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //     });
 
 //     // Animate the headings and paragraph
-//     gsap.from(".container h2, .container h1, .container p", {
+//     gsap.from(".about h2, .about h1, .about p", {
 //         scrollTrigger: {
-//             trigger: ".container",
+//             trigger: ".about",
 //             start: "top 50%",
 //             end: "top 10%",
 //             scrub: true,
@@ -53,9 +53,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //     });
 
 //     // Animate the buttons
-//     gsap.from(".container button:nth-of-type(1)", {
+//     gsap.from(".about button:nth-of-type(1)", {
 //         scrollTrigger: {
-//             trigger: ".container",
+//             trigger: ".about",
 //             start: "top 30%",
 //             end: "top 10%",
 //             scrub: true,
@@ -68,9 +68,9 @@ document.addEventListener("DOMContentLoaded", function () {
 //         stagger: 3 // Slightly increased stagger
 //     });
 
-//     gsap.from(".container button:nth-of-type(2)", {
+//     gsap.from(".about button:nth-of-type(2)", {
 //         scrollTrigger: {
-//             trigger: ".container",
+//             trigger: ".about",
 //             start: "top 30%",
 //             end: "top 10%",
 //             scrub: true,
@@ -101,7 +101,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 const element = entry.target;
 
                 // Image animation
-                if (element.matches(".container img")) {
+                if (element.matches(".about img")) {
                     gsap.from(element, {
                         opacity: 0,
                         x: -100,
@@ -111,7 +111,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 // Heading and paragraph animation
-                if (element.matches(".container h2, .container h1, .container p")) {
+                if (element.matches(".about h2, .about h1, .about p")) {
                     gsap.from(element, {
                         opacity: 0,
                         y: 30,
@@ -122,7 +122,7 @@ document.addEventListener("DOMContentLoaded", function () {
                 }
 
                 // Button animations
-                if (element.matches(".container button:first-of-type")) {
+                if (element.matches(".about button:first-of-type")) {
                     gsap.from(element, {
                         opacity: 0,
                         x: -100,
@@ -131,7 +131,7 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 }
 
-                if (element.matches(".container button:last-of-type")) {
+                if (element.matches(".about button:last-of-type")) {
                     gsap.from(element, {
                         opacity: 0,
                         x: 100,
@@ -147,7 +147,7 @@ document.addEventListener("DOMContentLoaded", function () {
     }, observerOptions);
 
     // Target elements to observe
-    document.querySelectorAll(".container img, .container h2, .container h1, .container p, .container button").forEach(el => {
+    document.querySelectorAll(".about img, .about h2, .about h1, .about p, .about button").forEach(el => {
         observer.observe(el);
     });
 });
@@ -347,9 +347,47 @@ document.addEventListener('DOMContentLoaded', function() {
 //     }
 // }
 
+document.addEventListener("DOMContentLoaded", () => {
+    // Select all dropdown toggle buttons
+    
+    
+    const dropdownToggles = document.querySelectorAll(".dropdown-toggle")
+  
+    dropdownToggles.forEach((toggle) => {
+      toggle.addEventListener("click", () => {
+        console.log("hello");
+        // Find the next sibling element which is the dropdown menu
+        const dropdownMenu = toggle.nextElementSibling
+  
+        // Toggle the 'hidden' class to show or hide the dropdown menu
+        if (dropdownMenu.classList.contains("hidden")) {
+          // Hide any open dropdown menus before showing the new one
+          document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+            menu.classList.add("hidden")
+          })
+  
+          dropdownMenu.classList.remove("hidden")
+        } else {
+          dropdownMenu.classList.add("hidden")
+        }
+      })
+    })
+  
+    // Optional: Clicking outside of an open dropdown menu closes it
+    // window.addEventListener("click", (event) => {
+    //   if (!event.target.matches(".dropdown-toggle")) {
+    //     document.querySelectorAll(".dropdown-menu").forEach((menu) => {
+    //       if (!menu.contains(event.target)) {
+    //         menu.classList.add("hidden")
+    //       }
+    //     })
+    //   }
+    // })
+  })
+
 
 function change(e){
-    let list=document.querySelector('aside');
+    let list=document.getElementById('mobileMenu');
     
     console.log(list);
 
