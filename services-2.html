@@ -5,8 +5,8 @@
         <meta charset="UTF-8">
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link rel="stylesheet" href="style.css">
-        <link rel="stylesheet" href="svg_animation.css">
+        <!-- <link rel="stylesheet" href="style.css">
+        <link rel="stylesheet" href="svg_animation.css"> -->
         <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
@@ -14,6 +14,7 @@
 
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <link rel="stylesheet" href="./src/output.css">
+        <link rel="stylesheet" href="input.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
@@ -79,58 +80,94 @@
 
 <body class="poppins-thin" id="content">
 
-        <nav
-        class="absolute hidden md:absolute md:flex backdrop-blur-lg justify-between z-30 duration-500 ease-in-out  h-[5.8rem] w-full items-center pl-6 pr-3 md:pr-0  overflow-hidden">
+        <nav class="z-[30] absolute w-full text-black">
+                <div class="container mx-auto px-4 md:flex justify-between items-center gap-6">
+                        <!-- Logo -->
+                        <div class="flex items-center justify-between md:w-auto w-full">
+                                <a href="#" class="flex items-center py-5 px-2 text-white flex-1">
+                                        <span class="font-bold w-[10rem]"><img  src="images/logo.svg" alt="" srcset=""></span>
+                                </a>
+                                <!-- Mobile Menu Button -->
+                                <div class="md:hidden flex items-center">
+                                        <button class="mobile-menu-button" >
+                                                <ion-icon onclick="change(this)" name="menu"></ion-icon>
+                                        </button>
+                                </div>
+                        </div>
+                        <!-- Primary Navigation -->
+                        <div
+                                class="hidden  font-normal md:flex md:flex-row flex-col items-center justify-start md:space-x-1 navigation-menu pb-3 md:pb-0 navigation-menu">
+                                <a href="./index.html" class="py-2  px-3 block hover:text-[#3d7cbc]">Home</a>
+                                <a href="#" class="py-2 px-3 block hover:text-[#3d7cbc]">Experience</a>
 
 
-        <div class="w-[14rem] flex items-center justify-center  h-full">
+                                <!-- Dropdown Menu -->
+                                <div class="relative">
 
-                <img class="w-full  object-contain h-full" id="logo" src="./images/logo.svg"
-                        alt="" srcset="">
+                                        <button
+                                                class="dropdown-toggle  py-2 px-3  flex items-center gap-2 rounded">
+                                                <span class="pointer-events-none hover:text-[#3d7cbc]">Services</span>
+                                                <svg class="w-3 h-3 pointer-events-none"
+                                                        xmlns="http://www.w3.org/2000/svg" width="24" height="24"
+                                                        viewBox="0 0 24 24">
+                                                        <title>chevron-down</title>
+                                                        <g fill="none">
+                                                                <path d="M19.5 8.25l-7.5 7.5-7.5-7.5"
+                                                                        stroke="currentColor" stroke-width="1.5"
+                                                                        stroke-linecap="round" stroke-linejoin="round">
+                                                                </path>
+                                                        </g>
+                                                </svg>
+                                        </button>
 
-        </div>
-        <ul
-                class="md:flex md:space-x-7 justify-start items-center pb-3 min-w-[26%] w-fit h-full text-xl hidden lg:static z-[-1]  md:top-0 transition-all ease-in duration-500 poppins-thin">
-                <li class="cursor-pointer pl-3 pr-3 duration-500 ">
-                        <a class="nlink underline-center poppins-thin" href="index.html">Home</a>
-                </li>
-                <li class="cursor-pointer pl-3 pr-3 duration-500 ">
-                        <a class="nlink underline-center" href="allimage.html">Experience</a>
-                </li>
-                <li class="cursor-pointer pl-3 pr-3 duration-500 ">
-                        <a class="nlink underline-center" href="services-1.html">Services</a>
-                </li>
-                <li class="cursor-pointer pl-3 pr-3 duration-500 ">
-                        <a class="nlink underline-center" href="contact.html">Contact</a>
-                </li>
+                                        <div
+                                                class="dropdown-menu absolute hidden bg-gray-50 text-black text-center rounded-b-lg left-[-6rem] pb-2 w-[18rem]">
+                                                <a href="./services-1.html" class="block px-2 py-2 hover:text-[#3d7cbc] capitalize ">Scientific and regulatory advice</a>
+                                                <a href="./services-2.html" class="block px-2 py-2 hover:text-[#3d7cbc] capitalize">CMC dossier authoring</a>
+                                                <a href="./services-3.html" class="block px-2 py-2 hover:text-[#3d7cbc] capitalize">Training and coaching</a>
+                                        </div>
+                                </div>
+                                <a href="contact/contact.html" class="py-2 px-3 block">Contact</a>
+                        </div>
+                </div>
+        </nav>
+        <!-- Mobile Sidebar -->
+        <aside id="mobileMenu" class="bg-white backdrop-blur-md  left-[-80vw] opacity-0 duration-500 ease-out rounded-2xl fixed z-[100] flex justify-center items-center top-0 w-[80vw] bg-opacity-40  h-[100vh]">
+                
+                <div class="absolute top-0 flex items-center pl-4 w-full h-[5rem] ">
+                        <div class="w-[45%]">
 
-        </ul>
+                                <img src="./images/logo.svg" alt="" srcset="">
+                        </div>
+                </div>
 
-        <ion-icon class="md:hidden text-red-500 text-3xl" name="menu" onclick="change(this)"></ion-icon>
-</nav>
+                <ul class="min-h-[20rem]  flex flex-col  space-y-6 h-fit items-center text-center w-full text-2xl">
+                    <li class="cursor-pointer">
+                        <a class="nlink underline-center" href="index.html">Home</a>
+                    </li>
+                    <li class="cursor-pointer">
+                        <a class="nlink underline-center" href="#">Experience</a>
+                    </li>
+                    <div class="w-full flex justify-center flex-col group">
+                        <button class="flex justify-center  items-center text-gray-800 hover:text-indigo-600 focus:outline-none">
+                            Services
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5 ml-1" viewBox="0 0 20 20" fill="currentColor">
+                                <path fill-rule="evenodd" d="M5.293 7.293a1 1 0 011.414 0L10 10.586l3.293-3.293a1 1 0 111.414 1.414l-4 4a1 1 0 01-1.414 0l-4-4a1 1 0 010-1.414z" clip-rule="evenodd" />
+                            </svg>
+                        </button>
+                        <div class=" text-sm mt-2 duration-200 ease-out  w-full capitalize rounded-md shadow-lg hidden group-hover:block">
+                            <a href="./services-1.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-600 hover:text-white">Scientific and regulatory advice</a>
+                            <a href="./services-2.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-600 hover:text-white">CMC dossier authoring</a>
+                            <a href="./services-3.html" class="block px-4 py-2 text-gray-800 hover:bg-indigo-600 hover:text-white">Training and coaching</a>
+                        </div>
+                    </div>
+                    <li class="cursor-pointer">
+                        <a class="nlink underline-center" href="contact/contact.html">Contact</a>
+                    </li>
+                </ul>
+            </aside>
 
-<aside
-        class="left-[-80vw] backdrop-blur-md opacity-0 duration-500  ease-out rounded-2xl fixed z-[10] flex justify-center items-center overflow-hidden top-0 w-[80vw] bg-opacity-40 bg-gray-500 h-[100vh] ">
-
-        <ul class=" min-h-[20rem] space-y-6 h-fit  items-center text-center w-full pb-3  text-2xl ">
-                <li class="cursor-pointer pl-3 pr-3 duration-500 font-bold">
-                        <a class="nlink underline-center" href="allimage.html">Home</a>
-                </li>
-                <li class="cursor-pointer pl-3 pr-3 duration-500 font-bold">
-                        <a class="nlink underline-center" href="allimage.html">Experience</a>
-                </li>
-                <li class="cursor-pointer pl-3 pr-3 duration-500 font-bold">
-                        <a class="nlink underline-center" href="contactus.html">Services</a>
-                </li>
-
-                <li class="cursor-pointer pl-3 pr-3 duration-500 font-bold">
-                        <a class="nlink underline-center" href="contactus.html">Contact us</a>
-                </li>
-        </ul>
-
-</aside>
-
-        <div  class="blue-brush container mx-auto px-4 pt-32 md:pt-24">
+        <div  class="blue-brush container mx-auto px-4 pt-32 md:pt-40">
             <h3 class="text-5xl text-center font-semibold text-navy-800 mb-6 ">
                <span class="text-blue-400 ">CMC </span>Dossier <br> <span class=" playfair-display font-thin"> Authoring</span>
             </h3>
@@ -141,9 +178,9 @@
                         
                         <div class="w-full md:w-1/2 m-auto text-justify">
                                
-                                <h1 class="text-3xl font-semibold text-blue-400 mb-6 mt-4 playfair-normal">Development</h1>
-                                <ul class="">
-                                        <li class="mb-4 playfair-normal font-medium">
+                                <h1 class="text-5xl font-semibold text-blue-400 mb-6 mt-4 playfair-normal">Development</h1>
+                                <ul class="text-xl">
+                                        <li class="mb-4 playfair-normal font-normal">
                                             Compilation of documentation, authoring and review of EU Investigational Medicinal Product Dossier (IMPD), US Investigational New Drug Application (IND) and International Clinical trial Application (CTA)
                                         </li>
                                        
@@ -166,12 +203,12 @@
 
                         <div class="w-full md:w-1/2 m-auto text-justify">
                                
-                                <h1 class="text-3xl font-semibold text-purple-400 mb-6 mt-4 playfair-normal">Licensing</h1>
-                                <ul class=" list-disc">
-                                        <li class="mb-4 playfair-normal font-medium">
+                                <h1 class="text-5xl font-semibold text-purple-400 mb-6 mt-4 playfair-normal">Licensing</h1>
+                                <ul class=" list-disc text-xl">
+                                        <li class="mb-4 playfair-normal font-normal">
                                     	CMC Module 3, Module 2.3 for dossier licensing (US, EU, Asia, International countries)
                                          </li>
-                                         <li class="mb-4 playfair-normal font-medium">
+                                         <li class="mb-4 playfair-normal font-normal">
                                         Briefing documents for Authority consultation prior to licensing (US FDA pre-BLA meeting, EU EMA Scientific Advice consultation.
                                         </li>
                                            
@@ -184,88 +221,110 @@
 
        
 
-        
-        
-        <!-- <section class="fixed hidden z-20 flex justify-center items-center  top-0 w-[100vw] h-[100vh]"
-                id="uploadOption">
+        <footer class="bg-gray-50 float-end w-full">
+                <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 lg:px-12">
+                        <div class="md:flex md:justify-between">
+                                <div class="mb-6 md:mb-0">
+                                        <a href="https://flowbite.com/" class="flex items-center">
+                                                <img src="./images/logo.svg" class="h-10 me-3" alt="FlowBite Logo" />
+                                                <span
+                                                        class="self-center text-2xl font-semibold whitespace-nowrap"></span>
+                                        </a>
+                                </div>
+                                <div class="grid  grid-cols-2 gap-8 sm:gap-6 sm:grid-cols-3">
+                                        <div class="hidden md:block">
 
-                <div class="w-[55%] h-[60%]  backdrop-blur-lg rounded-2xl">
-                       
-                        <div class="w-full h-full flex justify-center items-center">
-
-                                <form action="file.php" method="post" enctype="multipart/form-data"
-                                        class="w-[80%] md:w-[60%] flex flex-col  items-center ">
-                                        
-
-                                        <div class="flex  items-center justify-center w-full">
-                                                <label for="userfile"
-                                                        class="flex  rounded-3xl flex-col items-center bg-gray-300 justify-center w-full h-64 border-2 border-gray-300 border-dashed  cursor-pointer  ">
-                                                        <div
-                                                                class="flex flex-col items-center justify-center pt-5 pb-6">
-                                                                <svg class="w-8 h-8 mb-4 " aria-hidden="true"
-                                                                        xmlns="http://www.w3.org/2000/svg" fill="none"
-                                                                        viewBox="0 0 20 16">
-                                                                        <path stroke="currentColor"
-                                                                                stroke-linecap="round"
-                                                                                stroke-linejoin="round" stroke-width="2"
-                                                                                d="M13 13h3a3 3 0 0 0 0-6h-.025A5.56 5.56 0 0 0 16 6.5 5.5 5.5 0 0 0 5.207 5.021C5.137 5.017 5.071 5 5 5a4 4 0 0 0 0 8h2.167M10 15V6m0 0L8 8m2-2 2 2" />
-                                                                </svg>
-                                                                <p class="mb-2 p-1 text-lg text-center "><span
-                                                                                class="font-semibold">Upload your Shadow
-                                                                                Image here</span></p>
-                                                                <p class="text-xs text-center ">PNG, JPEG, JPG</p>
-                                                                <p class="text-xs text-center font-bold "
-                                                                        id="selected_file_name"></p>
-                                                        </div>
-                                                </label>
-                                                <input id="userfile" type="file" name="userfile" class="hidden" />
                                         </div>
-
-                                </form>
+                                        <div class="">
+                                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">
+                                                        Follow us</h2>
+                                                <ul class="text-gray-500 font-medium">
+                                                        <li class="mb-4">
+                                                                <a href="https://github.com/themesberg/flowbite"
+                                                                        class="hover:underline ">Github</a>
+                                                        </li>
+                                                        <li>
+                                                                <a href="https://discord.gg/4eeurUVvTy"
+                                                                        class="hover:underline">Discord</a>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                        <div>
+                                                <h2 class="mb-6 text-sm font-semibold text-gray-900 uppercase ">
+                                                        Legal</h2>
+                                                <ul class="text-gray-500 font-medium">
+                                                        <li class="mb-4">
+                                                                <a href="#" class="hover:underline">Privacy Policy</a>
+                                                        </li>
+                                                        <li>
+                                                                <a href="#" class="hover:underline">Terms &amp;
+                                                                        Conditions</a>
+                                                        </li>
+                                                </ul>
+                                        </div>
+                                </div>
                         </div>
-
+                        <hr class="my-6 border-gray-600 sm:mx-auto lg:my-8" />
+                        <div class="sm:flex sm:items-center sm:justify-between">
+                                <span class="text-sm text-gray-500 sm:text-center">© 2024 <a
+                                                href="https://flowbite.com/" class="hover:underline">MP BIOReg
+                                                Consulting</a>. All
+                                        Rights Reserved.
+                                </span>
+                                <div class="flex mt-4 sm:justify-center sm:mt-0">
+                                        <a href="#" class="text-gray-500 hover:text-gray-900">
+                                                <svg class="w-4 h-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                        viewBox="0 0 8 19">
+                                                        <path fill-rule="evenodd"
+                                                                d="M6.135 3H8V0H6.135a4.147 4.147 0 0 0-4.142 4.142V6H0v3h2v9.938h3V9h2.021l.592-3H5V3.591A.6.6 0 0 1 5.592 3h.543Z"
+                                                                clip-rule="evenodd" />
+                                                </svg>
+                                                <span class="sr-only">Facebook page</span>
+                                        </a>
+                                        <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
+                                                <svg class="w-4 h-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                        viewBox="0 0 21 16">
+                                                        <path
+                                                                d="M16.942 1.556a16.3 16.3 0 0 0-4.126-1.3 12.04 12.04 0 0 0-.529 1.1 15.175 15.175 0 0 0-4.573 0 11.585 11.585 0 0 0-.535-1.1 16.274 16.274 0 0 0-4.129 1.3A17.392 17.392 0 0 0 .182 13.218a15.785 15.785 0 0 0 4.963 2.521c.41-.564.773-1.16 1.084-1.785a10.63 10.63 0 0 1-1.706-.83c.143-.106.283-.217.418-.33a11.664 11.664 0 0 0 10.118 0c.137.113.277.224.418.33-.544.328-1.116.606-1.71.832a12.52 12.52 0 0 0 1.084 1.785 16.46 16.46 0 0 0 5.064-2.595 17.286 17.286 0 0 0-2.973-11.59ZM6.678 10.813a1.941 1.941 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.919 1.919 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Zm6.644 0a1.94 1.94 0 0 1-1.8-2.045 1.93 1.93 0 0 1 1.8-2.047 1.918 1.918 0 0 1 1.8 2.047 1.93 1.93 0 0 1-1.8 2.045Z" />
+                                                </svg>
+                                                <span class="sr-only">Discord community</span>
+                                        </a>
+                                        <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
+                                                <svg class="w-4 h-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                        viewBox="0 0 20 17">
+                                                        <path fill-rule="evenodd"
+                                                                d="M20 1.892a8.178 8.178 0 0 1-2.355.635 4.074 4.074 0 0 0 1.8-2.235 8.344 8.344 0 0 1-2.605.98A4.13 4.13 0 0 0 13.85 0a4.068 4.068 0 0 0-4.1 4.038 4 4 0 0 0 .105.919A11.705 11.705 0 0 1 1.4.734a4.006 4.006 0 0 0 1.268 5.392 4.165 4.165 0 0 1-1.859-.5v.05A4.057 4.057 0 0 0 4.1 9.635a4.19 4.19 0 0 1-1.856.07 4.108 4.108 0 0 0 3.831 2.807A8.36 8.36 0 0 1 0 14.184 11.732 11.732 0 0 0 6.291 16 11.502 11.502 0 0 0 17.964 4.5c0-.177 0-.35-.012-.523A8.143 8.143 0 0 0 20 1.892Z"
+                                                                clip-rule="evenodd" />
+                                                </svg>
+                                                <span class="sr-only">Twitter page</span>
+                                        </a>
+                                        <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
+                                                <svg class="w-4 h-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                        viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                                d="M10 .333A9.911 9.911 0 0 0 6.866 19.65c.5.092.678-.215.678-.477 0-.237-.01-1.017-.014-1.845-2.757.6-3.338-1.169-3.338-1.169a2.627 2.627 0 0 0-1.1-1.451c-.9-.615.07-.6.07-.6a2.084 2.084 0 0 1 1.518 1.021 2.11 2.11 0 0 0 2.884.823c.044-.503.268-.973.63-1.325-2.2-.25-4.516-1.1-4.516-4.9A3.832 3.832 0 0 1 4.7 7.068a3.56 3.56 0 0 1 .095-2.623s.832-.266 2.726 1.016a9.409 9.409 0 0 1 4.962 0c1.89-1.282 2.717-1.016 2.717-1.016.366.83.402 1.768.1 2.623a3.827 3.827 0 0 1 1.02 2.659c0 3.807-2.319 4.644-4.525 4.889a2.366 2.366 0 0 1 .673 1.834c0 1.326-.012 2.394-.012 2.72 0 .263.18.572.681.475A9.911 9.911 0 0 0 10 .333Z"
+                                                                clip-rule="evenodd" />
+                                                </svg>
+                                                <span class="sr-only">GitHub account</span>
+                                        </a>
+                                        <a href="#" class="text-gray-500 hover:text-gray-900 ms-5">
+                                                <svg class="w-4 h-4" aria-hidden="true"
+                                                        xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                                                        viewBox="0 0 20 20">
+                                                        <path fill-rule="evenodd"
+                                                                d="M10 0a10 10 0 1 0 10 10A10.009 10.009 0 0 0 10 0Zm6.613 4.614a8.523 8.523 0 0 1 1.93 5.32 20.094 20.094 0 0 0-5.949-.274c-.059-.149-.122-.292-.184-.441a23.879 23.879 0 0 0-.566-1.239 11.41 11.41 0 0 0 4.769-3.366ZM8 1.707a8.821 8.821 0 0 1 2-.238 8.5 8.5 0 0 1 5.664 2.152 9.608 9.608 0 0 1-4.476 3.087A45.758 45.758 0 0 0 8 1.707ZM1.642 8.262a8.57 8.57 0 0 1 4.73-5.981A53.998 53.998 0 0 1 9.54 7.222a32.078 32.078 0 0 1-7.9 1.04h.002Zm2.01 7.46a8.51 8.51 0 0 1-2.2-5.707v-.262a31.64 31.64 0 0 0 8.777-1.219c.243.477.477.964.692 1.449-.114.032-.227.067-.336.1a13.569 13.569 0 0 0-6.942 5.636l.009.003ZM10 18.556a8.508 8.508 0 0 1-5.243-1.8 11.717 11.717 0 0 1 6.7-5.332.509.509 0 0 1 .055-.02 35.65 35.65 0 0 1 1.819 6.476 8.476 8.476 0 0 1-3.331.676Zm4.772-1.462A37.232 37.232 0 0 0 13.113 11a12.513 12.513 0 0 1 5.321.364 8.56 8.56 0 0 1-3.66 5.73h-.002Z"
+                                                                clip-rule="evenodd" />
+                                                </svg>
+                                                <span class="sr-only">Dribbble account</span>
+                                        </a>
+                                </div>
+                        </div>
                 </div>
-
-        </section> -->
-
-
-        <!-- <section class="h-[100vh] w-[100%]  box-border flex justify-center gap-2 items-center">
-
-                <div class="w-[45%] h-[78%] bg-green-200 images shadow-2xl shadow-yellow-300 " id="images">
-                        <img src="images/0000.png" class="" alt="" srcset="">
-                        <img src="images/0001.png" alt="" srcset="">
-                        <img src="images/0002.png" alt="" srcset="">
-                        <img src="images/0004.png" alt="" srcset="">
-                        <img src="images/0002.png" alt="" srcset="">
-                        <img src="images/0004.png" alt="" srcset="">
-                        <img src="images/0002.png" alt="" srcset="">
-                        <img src="images/0004.png" alt="" srcset="">
-                        <img src="images/0002.png" alt="" srcset="">
-                        <img src="images/0004.png" alt="" srcset="">
-                </div>
-
-                <div class="w-[45%] h-[78%] bg-green-200 images2 " id="images">
-                        <img src="images/0000.png" class="" alt="" srcset="">
-                        <img src="images/0001.png" alt="" srcset="">
-                        <img src="images/0002.png" alt="" srcset="">
-                        <img src="images/0004.png" alt="" srcset="">
-                        <img src="images/0002.png" alt="" srcset="">
-                        <img src="images/0004.png" alt="" srcset="">
-                        <img src="images/0002.png" alt="" srcset="">
-                        <img src="images/0004.png" alt="" srcset="">
-                        <img src="images/0002.png" alt="" srcset="">
-                        <img src="images/0004.png" alt="" srcset="">
-                </div>
-
-        </section> -->
-
-
-       
-        <!-- </div> -->
-
-
-        <!-- <script src="app_2.js"></script> -->
-
+        </footer>
         <script>
 
                 function CloseImgpanel() {
