@@ -254,6 +254,115 @@ background-repeat: no-repeat;
 }
 
 
+.advice {
+  /* font-style: italic; */
+  position: relative;
+  z-index: 2;
+  /* cursor: pointer; */
+  /* font-weight: bold; */
+  /* background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(173, 216, 230, 0.7) 50%, rgba(0, 0, 139, 0.5) 70%); */
+  /* filter: blur(20px); */
+  /* color: black; */
+  background-blend-mode:difference ;
+  /* padding: 0 0.22em; */
+  /* font-weight: 800; */
+  /* background-color: white; */
+  border-radius: 10px;
+}
+
+.advice::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 70%;
+  transform: translate(-50%, -50%);
+  width: 70%;
+  /* color: white; */
+  height: 120%;
+  /* background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(150, 215, 237, 0.7) 50%, rgba(0, 0, 139, 0.5) 70%); */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgb(231,255,223) 50%, rgb(121, 231, 138) 50%);
+
+  /* background: url(D:\tailwend\test\project\Website_contents\Biological_bg-01.png); */
+  transform: rotate(10);
+  filter: blur(20px);
+  /* filter: ; */
+  z-index: -1;
+  border-radius: 50%;
+}
+
+
+.Authoring {
+  /* font-style: italic; */
+  position: relative;
+  z-index: 2;
+  /* cursor: pointer; */
+  /* font-weight: bold; */
+  /* background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(173, 216, 230, 0.7) 50%, rgba(0, 0, 139, 0.5) 70%); */
+  /* filter: blur(20px); */
+  /* color: black; */
+  background-blend-mode:difference ;
+  /* padding: 0 0.22em; */
+  /* font-weight: 800; */
+  /* background-color: white; */
+  border-radius: 10px;
+}
+
+.Authoring::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  /* color: white; */
+  height: 120%;
+  /* background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(150, 215, 237, 0.7) 50%, rgba(0, 0, 139, 0.5) 70%); */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgb(152, 221, 237) 50%, rgb(151, 236, 255) 40%);
+
+  /* background: url(D:\tailwend\test\project\Website_contents\Biological_bg-01.png); */
+  transform: rotate(10);
+  filter: blur(20px);
+  /* filter: ; */
+  z-index: -1;
+  border-radius: 50%;
+}
+
+.Coaching {
+  /* font-style: italic; */
+  position: relative;
+  z-index: 2;
+  /* cursor: pointer; */
+  /* font-weight: bold; */
+  /* background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(173, 216, 230, 0.7) 50%, rgba(0, 0, 139, 0.5) 70%); */
+  /* filter: blur(20px); */
+  /* color: black; */
+  background-blend-mode:difference ;
+  /* padding: 0 0.22em; */
+  /* font-weight: 800; */
+  /* background-color: white; */
+  border-radius: 10px;
+}
+
+.Coaching::after {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 80%;
+  transform: translate(-50%, -50%);
+  width: 50%;
+  /* color: white; */
+  height: 120%;
+  /* background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgba(150, 215, 237, 0.7) 50%, rgba(0, 0, 139, 0.5) 70%); */
+  background: radial-gradient(circle, rgba(255, 255, 255, 0) 0%, rgb(195, 193, 245) 50%, rgb(195,193,245) 50%);
+
+  /* background: url(D:\tailwend\test\project\Website_contents\Biological_bg-01.png); */
+  transform: rotate(10);
+  filter: blur(20px);
+  /* filter: ; */
+  z-index: -1;
+  border-radius: 50%;
+}
+
 
 .underline-center {
     position: relative;

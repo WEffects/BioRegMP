@@ -6,22 +6,18 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <link rel="stylesheet" href="input.css">
-        <link rel="stylesheet" href="svg_animation.css">
         <script type="module" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.esm.js"></script>
         <script nomodule="" src="https://unpkg.com/ionicons@4.5.10-0/dist/ionicons/ionicons.js"></script>
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.css">
-        <link rel="stylesheet" href="https://unpkg.com/sheryjs/dist/Shery.css" /> <!-- Recommended -->
 
-        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
         <!-- <link rel="stylesheet" href="./src/output.css"> -->
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap"
                 rel="stylesheet">
-
+        <link rel="shortcut icon" href="Experience page/MP symbol.png" type="image/x-icon">
         <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
                 rel="stylesheet">
-        <title>Veffects</title>
+        <title>MP BioReg - Scientific and Regulatory Advice </title>
 
 
         <style>
@@ -88,7 +84,7 @@
                                 </a>
                                 <!-- Mobile Menu Button -->
                                 <div class="md:hidden flex items-center">
-                                        <button class="mobile-menu-button" >
+                                        <button class="mobile-menu-button text-3xl" >
                                                 <ion-icon onclick="change(this)" name="menu"></ion-icon>
                                         </button>
                                 </div>
@@ -97,14 +93,14 @@
                         <div
                                 class="hidden  font-normal md:flex md:flex-row flex-col items-center justify-start md:space-x-1 navigation-menu pb-3 md:pb-0 navigation-menu">
                                 <a href="./index.html" class="py-2  px-3 block hover:text-[#3d7cbc]">Home</a>
-                                <a href="#" class="py-2 px-3 block hover:text-[#3d7cbc]">Experience</a>
+                                <a href="./experince.html" class="py-2 px-3 block hover:text-[#3d7cbc]">Experience</a>
 
 
                                 <!-- Dropdown Menu -->
                                 <div class="relative">
 
                                         <button
-                                                class="dropdown-toggle  py-2 px-3  flex items-center gap-2 rounded">
+                                                class="dropdown-toggle  py-2 px-3 hover:text-[#3d7cbc]  flex items-center gap-2 rounded">
                                                 <span class="pointer-events-none hover:text-[#3d7cbc]">Services</span>
                                                 <svg class="w-3 h-3 pointer-events-none"
                                                         xmlns="http://www.w3.org/2000/svg" width="24" height="24"
@@ -167,9 +163,9 @@
             </aside>
 
 
-        <div  class="green-brush container mx-auto px-4 pt-32 md:pt-40">
-            <h3 class="text-5xl text-center font-semibold text-navy-800 mb-6 ">
-               <span class="text-green-400 ">Scientific</span>  and <br> Regulatory <span class="green-brush playfair-display font-thin ">Advice</span>
+        <div  class=" container mx-auto px-4 pt-32 md:pt-40">
+            <h3 class="text-5xl  text-center font-semibold text-navy-800 mb-6 ">
+               <span class="text-green-400 ">Scientific</span>  and <br> Regulatory <span class="advice playfair-display font-thin ">Advice</span>
             </h3>
         </div>
 
@@ -252,7 +248,7 @@
                 <div class="mx-auto w-full max-w-screen-xl p-4 py-6 lg:py-8 lg:px-12">
                         <div class="md:flex md:justify-between">
                                 <div class="mb-6 md:mb-0">
-                                        <a href="https://flowbite.com/" class="flex items-center">
+                                        <a href="https://mpbioregconsulting.com" class="flex items-center">
                                                 <img src="./images/logo.svg" class="h-10 me-3" alt="FlowBite Logo" />
                                                 <span
                                                         class="self-center text-2xl font-semibold whitespace-nowrap"></span>
@@ -267,11 +263,11 @@
                                                         Follow us</h2>
                                                 <ul class="text-gray-500 font-medium">
                                                         <li class="mb-4">
-                                                                <a href="https://github.com/themesberg/flowbite"
+                                                                <a href="#"
                                                                         class="hover:underline ">Github</a>
                                                         </li>
                                                         <li>
-                                                                <a href="https://discord.gg/4eeurUVvTy"
+                                                                <a href="#"
                                                                         class="hover:underline">Discord</a>
                                                         </li>
                                                 </ul>
@@ -294,7 +290,7 @@
                         <hr class="my-6 border-gray-600 sm:mx-auto lg:my-8" />
                         <div class="sm:flex sm:items-center sm:justify-between">
                                 <span class="text-sm text-gray-500 sm:text-center">© 2024 <a
-                                                href="https://flowbite.com/" class="hover:underline">MP BIOReg
+                                                href="https://mpbioregconsulting.com" class="hover:underline">MP BioReg
                                                 Consulting</a>. All
                                         Rights Reserved.
                                 </span>
@@ -353,115 +349,13 @@
                 </div>
         </footer>
 
-        <script>
-
-                function CloseImgpanel() {
-                        let uploadImage = document.getElementById("uploadImage")
-                        uploadImage.classList.toggle("hidden")
-                }
-                function showuploadingOption(params) {
-                        let uploadOption = document.getElementById("uploadOption")
-                        uploadOption.classList.toggle("hidden")
-                }
-
-
-                // function renderImgPanel() {
-                const image_input = document.getElementById("userfile");
-
-                // var uploadImage2="";
-                console.log("in upload");
-                // var uploadImage2="";
-                image_input.addEventListener("change", function () {
-                        // let IndexPage = document.getElementById('IndexPage');
-                        // IndexPage.classList.add('hidden');
-                        console.log("hello world");
-                        let uploadOption = document.getElementById("uploadOption")
-                        uploadOption.classList.toggle("hidden")
-                        let uploadImage = document.getElementById("uploadImage");
-                        uploadImage.classList.toggle('hidden');
-                        const reader = new FileReader();
-                        reader.addEventListener("load", function () {
-                                uploadImage = reader.result;
-                                console.log(uploadImage);
-                                let ImgPreview = document.getElementById("ImgPreview");
-                                ImgPreview.src = uploadImage;
-
-                        });
-                        reader.readAsDataURL(this.files[0]);
-
-                })
-                // }
-        </script>
-
-
-
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script> -->
-
-        <!--  Gsap is needed for Basic Effects -->
-        <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-
-        <script>
-                var swiper = new Swiper(".mySwiper", {
-                        effect: "cards",
-                        speed: 700,
-                        grabCursor: true,
-                        centeredSlides: true,
-                        autoplay: {
-                                delay: 2500,
-                                disableOnInteraction: true,
-                        },
-                });
-        </script>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
         <!-- Scroll Trigger is needed for Scroll Effects -->
         <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
 
-        <!-- Three.js is needed for 3d Effects -->
-        <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.155.0/three.min.js"></script> -->
 
-        <!-- ControlKit is needed for Debug Panel -->
-        <!-- <script src="https://cdn.jsdelivr.net/gh/automat/controlkit.js@master/bin/controlKit.min.js"></script> -->
-
-        <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@3.5.4/dist/locomotive-scroll.min.js"></script>
-        <script type="text/javascript" src="https://unpkg.com/sheryjs/dist/Shery.js"></script> <!-- Recommended -->
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.cells.min.js"></script>
-
-        <!-- <script>
-        VANTA.CELLS({
-                el: "#services",
-                mouseControls: true,
-                touchControls: true,
-                gyroControls: false,
-                minHeight: 200.00,
-                minWidth: 200.00,
-                scale: 2.00,
-
-                color2: 0x5db847,
-                color1: 0x8f68ac,
-                color: 0x8f68ac,
-                speed: 0.70
-              })
-</script> -->
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.fog.min.js"></script>
-        <script>
-                VANTA.FOG({
-                        el: "#services",
-                        mouseControls: true,
-                        touchControls: true,
-                        gyroControls: false,
-                        minHeight: 200.00,
-                        minWidth: 200.00,
-                        highlightColor: 0x8f68ac,
-                        midtoneColor: 0x3d7cbc,
-                        lowlightColor: 0x5db847,
-                })
-        </script>
         <script src="app.js"></script>
 
 </body>
