@@ -20,6 +20,12 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.fromTo(".gsap-img2", { opacity: 0, x: -10 }, { duration: 1, opacity: 1, x: 0, delay: 2 });
     gsap.fromTo(".gsap-img3", { opacity: 0, x: 10 }, { duration: 1, opacity: 1, x: 0, delay: 2 });
     gsap.fromTo(".gsap-img4", { opacity: 0, x: 10 }, { duration: 1, opacity: 1, x: 0, delay: 2 });
+
+    gsap.fromTo(".gsap-text1s", { opacity: 0, x: 100 }, { duration: 1, opacity: 1, x: 0, delay: 0.5 });
+
+    gsap.fromTo(".gsap-img1s", { opacity: 0, x: -60 }, { duration: 1, opacity: 1, x: 0, delay: 0.5 });
+    gsap.fromTo(".gsap-img2s", { opacity: 0, x: 60 }, { duration: 1, opacity: 1, x: 0, delay: 0.5 });
+    
 });
 
 
