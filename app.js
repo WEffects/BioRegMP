@@ -142,14 +142,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 }
 
-                if (element.matches(".about button:last-of-type")) {
-                    gsap.from(element, {
-                        opacity: 0,
-                        x: 40,
-                        duration: 1.5,
-                        ease: "power1.out"
-                    });
-                }
+                // if (element.matches(".about button:last-of-type")) {
+                //     gsap.from(element, {
+                //         opacity: 0,
+                //         x: 40,
+                //         duration: 1.5,
+                //         ease: "power1.out"
+                //     });
+                // }
 
                 // Unobserve the element after animation
                 observer.unobserve(element);
