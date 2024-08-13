@@ -17,8 +17,8 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (element.matches(".company img")) {
                     gsap.from(element, {
                         opacity: 0,
-                        x: 100,
-                        duration: 2.5,
+                        x: 40,
+                        duration: 0.5,
                         ease: "power1.out"
                     });
                 }
@@ -27,10 +27,10 @@ document.addEventListener("DOMContentLoaded", function () {
                 if (element.matches(".company h2, .company h1, .company p")) {
                     gsap.from(element, {
                         opacity: 0,
-                        y: 60,
-                        duration: 2.8,
+                        y: 40,
+                        duration: 0.5,
                         ease: "power1.out",
-                        stagger: 0.4
+                        // stagger: 0.1
                     });
                 }
 

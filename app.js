@@ -5,7 +5,7 @@ console.log("hello")
 
 document.addEventListener("DOMContentLoaded", function () {
     // Animate the first text element from left to right
-    gsap.fromTo(".gsap-text1", { opacity: 0, x: -100 }, { duration: 1, opacity: 1, x: 0, delay: 0.5 });
+    gsap.fromTo(".gsap-text1", { opacity: 0, x: -10 }, { duration: 1, opacity: 1, x: 0, delay: 0.5 });
 
     // Animate the second text element with a fade-in and upward movement
     gsap.fromTo(".gsap-text2", { opacity: 0, y: 10 }, { duration: 1, opacity: 1, y: 0, delay: 1 });
@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.fromTo(".gsap-text3", { opacity: 0, y: 10 }, { duration: 1, opacity: 1, y: 0, delay: 1.5 });
 
     // Animate the button with a fade-in and upward movement
-    gsap.fromTo(".gsap-button", { opacity: 0, y: 10 }, { duration: 1, opacity: 1, y: 0, delay: 2 });
+    gsap.fromTo(".gsap-button", { opacity: 0, y: 10 }, { duration: 1, opacity: 1, y: 0, delay: 0.5 });
 
-    gsap.fromTo(".gsap-img1", { opacity: 0, x: -10 }, { duration: 1, opacity: 1, x: 0, delay: 2 });
-    gsap.fromTo(".gsap-img2", { opacity: 0, x: -10 }, { duration: 1, opacity: 1, x: 0, delay: 2 });
-    gsap.fromTo(".gsap-img3", { opacity: 0, x: 10 }, { duration: 1, opacity: 1, x: 0, delay: 2 });
-    gsap.fromTo(".gsap-img4", { opacity: 0, x: 10 }, { duration: 1, opacity: 1, x: 0, delay: 2 });
+    gsap.fromTo(".gsap-img1", { opacity: 0, x: -10 }, { duration: 1, opacity: 1, x: 0, delay: 1 });
+    gsap.fromTo(".gsap-img2", { opacity: 0, x: -10 }, { duration: 1, opacity: 1, x: 0, delay: 1 });
+    gsap.fromTo(".gsap-img3", { opacity: 0, x: 10 }, { duration: 1, opacity: 1, x: 0, delay: 1 });
+    gsap.fromTo(".gsap-img4", { opacity: 0, x: 10 }, { duration: 1, opacity: 1, x: 0, delay: 1 });
 
     gsap.fromTo(".gsap-text1s", { opacity: 0, x: 100 }, { duration: 1, opacity: 1, x: 0, delay: 0.5 });
 
@@ -142,14 +142,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     });
                 }
 
-                if (element.matches(".about button:last-of-type")) {
-                    gsap.from(element, {
-                        opacity: 0,
-                        x: 40,
-                        duration: 1.5,
-                        ease: "power1.out"
-                    });
-                }
+                // if (element.matches(".about button:last-of-type")) {
+                //     gsap.from(element, {
+                //         opacity: 0,
+                //         x: 40,
+                //         duration: 1.5,
+                //         ease: "power1.out"
+                //     });
+                // }
 
                 // Unobserve the element after animation
                 observer.unobserve(element);
@@ -165,28 +165,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Fade-in effect for initial page load
-    const content = document.getElementById('content');
-    setTimeout(() => {
-        content.classList.add('show');
-    }, 100);
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Fade-in effect for initial page load
+//     const content = document.getElementById('content');
+//     setTimeout(() => {
+//         content.classList.add('show');
+//     }, 100);
 
-    // Handle fade-out effect for links
-    const links = document.querySelectorAll('a[href]');
-    for (let link of links) {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            const href = this.getAttribute('href');
-            content.classList.add('fade-out');
-            setTimeout(() => {
-                window.location.href = href;
-            }, 500); // Match the transition duration
-        });
-    }
+//     // Handle fade-out effect for links
+//     const links = document.querySelectorAll('a[href]');
+//     for (let link of links) {
+//         link.addEventListener('click', function (event) {
+//             event.preventDefault();
+//             const href = this.getAttribute('href');
+//             content.classList.add('fade-out');
+//             setTimeout(() => {
+//                 window.location.href = href;
+//             }, 500); // Match the transition duration
+//         });
+//     }
 
 
-});
+// });
 
 
 
