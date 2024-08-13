@@ -165,28 +165,28 @@ document.addEventListener("DOMContentLoaded", function () {
 
 
 
-document.addEventListener('DOMContentLoaded', function () {
-    // Fade-in effect for initial page load
-    const content = document.getElementById('content');
-    setTimeout(() => {
-        content.classList.add('show');
-    }, 100);
+// document.addEventListener('DOMContentLoaded', function () {
+//     // Fade-in effect for initial page load
+//     const content = document.getElementById('content');
+//     setTimeout(() => {
+//         content.classList.add('show');
+//     }, 100);
 
-    // Handle fade-out effect for links
-    const links = document.querySelectorAll('a[href]');
-    for (let link of links) {
-        link.addEventListener('click', function (event) {
-            event.preventDefault();
-            const href = this.getAttribute('href');
-            content.classList.add('fade-out');
-            setTimeout(() => {
-                window.location.href = href;
-            }, 500); // Match the transition duration
-        });
-    }
+//     // Handle fade-out effect for links
+//     const links = document.querySelectorAll('a[href]');
+//     for (let link of links) {
+//         link.addEventListener('click', function (event) {
+//             event.preventDefault();
+//             const href = this.getAttribute('href');
+//             content.classList.add('fade-out');
+//             setTimeout(() => {
+//                 window.location.href = href;
+//             }, 500); // Match the transition duration
+//         });
+//     }
 
 
-});
+// });
 
 
 

@@ -11,7 +11,7 @@ export default defineConfig({
         service_2: resolve(__dirname, 'services-2.html'),
         service_3: resolve(__dirname, 'services-3.html'),
         experince: resolve(__dirname, 'experince.html'),
-        contact: resolve(__dirname, 'contact/contact.html'),
+        contact: resolve(__dirname, 'contact.html'),
         // Add other pages as needed
       }
     }
