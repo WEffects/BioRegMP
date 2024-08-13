@@ -5,7 +5,7 @@ console.log("hello")
 
 document.addEventListener("DOMContentLoaded", function () {
     // Animate the first text element from left to right
-    gsap.fromTo(".gsap-text1", { opacity: 0, x: -100 }, { duration: 1, opacity: 1, x: 0, delay: 0.5 });
+    gsap.fromTo(".gsap-text1", { opacity: 0, x: -10 }, { duration: 1, opacity: 1, x: 0, delay: 0.5 });
 
     // Animate the second text element with a fade-in and upward movement
     gsap.fromTo(".gsap-text2", { opacity: 0, y: 10 }, { duration: 1, opacity: 1, y: 0, delay: 1 });
@@ -14,12 +14,12 @@ document.addEventListener("DOMContentLoaded", function () {
     gsap.fromTo(".gsap-text3", { opacity: 0, y: 10 }, { duration: 1, opacity: 1, y: 0, delay: 1.5 });
 
     // Animate the button with a fade-in and upward movement
-    gsap.fromTo(".gsap-button", { opacity: 0, y: 10 }, { duration: 1, opacity: 1, y: 0, delay: 2 });
+    gsap.fromTo(".gsap-button", { opacity: 0, y: 10 }, { duration: 1, opacity: 1, y: 0, delay: 0.5 });
 
-    gsap.fromTo(".gsap-img1", { opacity: 0, x: -10 }, { duration: 1, opacity: 1, x: 0, delay: 2 });
-    gsap.fromTo(".gsap-img2", { opacity: 0, x: -10 }, { duration: 1, opacity: 1, x: 0, delay: 2 });
-    gsap.fromTo(".gsap-img3", { opacity: 0, x: 10 }, { duration: 1, opacity: 1, x: 0, delay: 2 });
-    gsap.fromTo(".gsap-img4", { opacity: 0, x: 10 }, { duration: 1, opacity: 1, x: 0, delay: 2 });
+    gsap.fromTo(".gsap-img1", { opacity: 0, x: -10 }, { duration: 1, opacity: 1, x: 0, delay: 1 });
+    gsap.fromTo(".gsap-img2", { opacity: 0, x: -10 }, { duration: 1, opacity: 1, x: 0, delay: 1 });
+    gsap.fromTo(".gsap-img3", { opacity: 0, x: 10 }, { duration: 1, opacity: 1, x: 0, delay: 1 });
+    gsap.fromTo(".gsap-img4", { opacity: 0, x: 10 }, { duration: 1, opacity: 1, x: 0, delay: 1 });
 
     gsap.fromTo(".gsap-text1s", { opacity: 0, x: 100 }, { duration: 1, opacity: 1, x: 0, delay: 0.5 });
 
